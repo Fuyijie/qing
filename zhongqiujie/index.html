@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0,
+           maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/swiper.min.css">
+    <link rel="stylesheet" href="style/animate.min.css">
+    <link rel="stylesheet" href="style/cmbscence.css">
+    <style>
+        /*第一页you*/
+        .swiper-slide:nth-child(1){
+            width: 100%;
+            height:100%;
+            background: url("//z2.xiu.top/upload/0a9c60fb28488a2f8893d0b4b188cd40/img/ba762f6c282a8eca.jpg") 0 100% no-repeat;
+        }
+        .yuebing-pre{
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            top:50%;
+            left: 0;
+        }
+        .yuebing-pre a{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .yuebing-pre a img{
+            width: 100%;
+            height: 100%;
+        }
+        /*中秋的思念*/
+        .please-me{
+            font-size: 46px;
+        }
+        .please-me .dianwo{
+            z-index: 20;
+            position: absolute;
+            top: 62%;
+            left: 58%;
+            font-family: 幼圆;
+            opacity: 0.8;
+            color: #dd7a35;
+            font-weight: bold;
+            font-size: 46px;
+            color: white;
+        }
+        .please-me .one-zhong{
+            position: absolute;
+            top: 19%;
+            left: 25%;
+            font-family: 楷体;
+            color: #ddae68;
+            font-weight: bold;
+        }
+        .please-me .de{
+            position: absolute;
+            top: 28%;
+            left: 43%;
+            font-family: 楷体;
+            color: #ddae68;
+            font-weight: bold;
+        }
+        .please-me .miss{
+            position: absolute;
+            top: 40%;
+            left: 36%;
+            font-size: 56px;
+            font-family: 楷体;
+            color: #ddae68;
+            font-weight: bold;
+        }
+        .zhongdian{
+            display: none;
+        }
+        @-webkit-keyframes rotation {
+            from{-webkit-transform: rotate(0deg);}
+            to{-webkit-transform: rotate(360deg);}
+        }
+        .zhongqiu{
+            -webkit-transform: rotate(360deg);
+            animation: rotation 0.1s linear infinite;
+            width:42%;
+            height: 27%;
+            margin-left: 30%;
+            margin-top: 10%;
+            background: url("images/xuanzhuan.png") 0 100% no-repeat;
+        }
+         .qianshou img{
+            width: 100%;
+            height: 100%;
+             animation: swing 8s 0s 10 backwards;
+        }
+        /*第二页*/
+        .swiper-slide:nth-child(2){
+            background: #cccccc;
+        }
+        .year-zhong p{
+            color: white;
+            font-size: 30px;
+            /*transform: translateZ(0);*/
+            /*transform: matrix(1, 0, 0, 1, 0, 0);"*/
+        }
+        .year-zhong p:nth-child(1){
+            font-family: 华文新魏;
+            position: absolute;
+            top: 5%;
+            left: 1%;
+        }
+        .year-zhong p:nth-child(2){
+            font-family: 华文新魏;
+            position: absolute;
+            top: 17%;
+            left: 13%;
+        }
+        .year-zhong p:nth-child(3){
+            font-family: 华文新魏;
+            position: absolute;
+            top: 30%;
+            left: 20%;
+        }
+        .year-zhong p:nth-child(4){
+            font-family: 华文新魏;
+            position: absolute;
+            top: 44%;
+            left: 26%;
+        }
+        .year-zhong p:nth-child(5){
+            font-family: 华文新魏;
+            position: absolute;
+            top: 55%;
+            left: 26%;
+        }
+        .daughter{
+            width: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .daughter img{
+            width: 100%;
+            height: 100%;
+        }
+        .father-tu{
+            width: 50%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .father-tu img{
+            width: 100%;
+            height: 100%;
+        }
+        /*第三页*mother*/
+        .swiper-slide:nth-child(3){
+            background-color: #cccccc;
+        }
+        .get-tell{
+            position: absolute;
+            color: white;
+            top: 60%;
+            left: 15%;
+            font-size: 22px;
+        }
+        .get-tell p:nth-child(1){
+            font-size: 55px;
+            font-family: 华文新魏;
+        }
+        .get-tell p:nth-child(2){
+            font-family: 华文新魏;
+        }
+        .swiper-slide:nth-child(3) img{
+            width: 80%;
+            height: 30%;
+            position: absolute;
+            bottom: 50%;
+            left: 10%;
+        }
+        .mother-love{
+            display: none;
+        }
+        .mother-love p:nth-child(1){
+            position: absolute;
+            top: 9%;
+            left: 0;
+            color: white;
+            opacity: 0.7;
+            font-size: 26px;
+        }
+        .mother-love p:nth-child(2){
+            position: absolute;
+            top: 15%;
+            left: 32%;
+            color: white;
+            opacity: 0.7;
+            font-size: 26px;
+        }
+        .mother-love p:nth-child(3){
+            position: absolute;
+            top: 22%;
+            left: 20%;
+            color: white;
+            opacity: 0.7;
+            font-size: 26px;
+        }
+        .mother-love p:nth-child(4){
+             position: absolute;
+             top: 30%;
+             left: 35%;
+             color: white;
+             opacity: 0.7;
+             font-size: 26px;
+         }
+        .mother-love p:nth-child(5){
+            position: absolute;
+            top: 40%;
+            left: 35%;
+            color: white;
+            opacity: 0.7;
+            font-size: 40px;
+            color: #dd6f7a;
+        }
+        .small-gift {
+            width: 34%;
+            height: 34%;
+            position: absolute;
+            top:55%;
+            left: 20%;
+        }
+        .small-gift img{
+            width: 100%;
+            height: 100%;
+        }
+        .big-gift{
+            width: 40%;
+            height: 40%;
+            position: absolute;
+            top:55%;
+            left: 50%;
+        }
+        .big-gift img{
+            width: 100%;
+            height: 100%;
+        }
+        /*第四页 I*/
+        .swiper-slide:nth-child(4){
+            background-color: #cccccc;
+        }
+        .people{
+            position: absolute;
+            top:30%;
+            width: 100%;
+            height: 50%;
+        }
+        .people img{
+            width: 100%;
+            height: 100%;
+        }
+        .haoxiang {
+            font-size: 20px;
+            font-family: 幼圆;
+        }
+        .haoxiang p:nth-child(1){
+            position: absolute;
+            left: 31%;
+            top:9%;
+            font-family: initial;
+        }
+        .haoxiang p:nth-child(2){
+            position: absolute;
+            left: 34%;
+            top:21%;
+            font-family: initial;
+        }
+        .haoxiang p:nth-child(3){
+            font-family: cursive;
+            font-size: 59px;
+            position: absolute;
+            left: 67%;
+            top: 17%;
+            color: #dd289c;
+        }
+        /*第五页love*/
+        .swiper-slide:nth-child(5){
+            background-color: #cccccc;
+        }
+        .swiper-slide:nth-child(5) img{
+            animation: zoom 2s infinite linear;
+            animation-delay: 2s;
+            width: 100%;
+            height: 100%;
+        }
+        .piaobo p:nth-child(1){
+            animation: zoom 3s infinite linear;
+            font-size: 25px;
+            color: #dd4697;
+            position: absolute;
+            top: 15%;
+            left: 38%;
+        }
+        .piaobo p:nth-child(2){
+            animation: zoom 3s infinite linear;
+            font-size: 25px;
+            color: #dd4697;
+            position: absolute;
+            top: 30%;
+            left: 8%;
+        }
+        /*第六页you*/
+        .swiper-slide:nth-child(6){
+            /*position: relative;*/
+            /*width: 100%;*/
+            /*height:100%;*/
+            background: url("//z2.xiu.top/upload/0a9c60fb28488a2f8893d0b4b188cd40/img/ba762f6c282a8eca.jpg") 0 100% no-repeat;
+        }
+        /*.suiran{*/
+            /*position: absolute;*/
+            /*width: 100%;*/
+            /*height: 100%;*/
+            /*backface-visibility: hidden;*/
+            /*z-index: 50;*/
+            /*transition: all 5s ease 0s;*/
+            /*transform: rotateY(45deg);*/
+        /*}*/
+        .suiran p:nth-child(1){
+            color: #ddae68;
+            position: absolute;
+            top: 12%;
+            left: 18%;
+            font-size: 24px;
+          }
+        .suiran p:nth-child(2){
+            color: #ddae68;
+            position: absolute;
+            top: 19%;
+            left: 28%;
+        }
+        .suiran p:nth-child(3){
+            color: #ddae68;
+            position: absolute;
+            top: 25%;
+            left: 30%;
+            font-size: 30px;
+        }
+        .suiran p:nth-child(4){
+            color: #ddae68;
+            position: absolute;
+            top: 33%;
+            left: 40%;
+        }
+        .suiran p:nth-child(5){
+            color: #ddae68;
+            position: absolute;
+            top: 39%;
+            left: 16%;
+            font-size: 30px;
+        }
+        .suiran p:nth-child(6){
+            color: #ddae68;
+            position: absolute;
+            top: 50%;
+            left: 18%;
+        }
+        .suiran p:nth-child(7){
+            color: #ddae68;
+            position: absolute;
+            top: 60%;
+            left: 10%;
+            font-size: 30px;
+        }
+        /*音乐播放*/
+        @-webkit-keyframes music{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .btn-music-on{
+            position: absolute;
+            background: url('images/musicBtn.png') 50% 50% no-repeat;
+            padding: 50px;
+            z-index: 9999;
+            top: 0;
+            right: 0;
+            animation: music 5s infinite linear;
+        }
+        .btn-music-off{
+            background: url('images/musicBtnOff.png') 50% 50% no-repeat;
+        }
+
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <!--第一页-->
+        <div class="swiper-slide">
+            <!--点击前-->
+                <div class="please-me">
+                    <div class="yuebing-pre">
+                        <a href="#" class="ani"
+                           swiper-animate-effect="fadeIn"
+                           swiper-animate-duration="2s"
+                           swiper-animate-delay="0.6s">
+                            <img src="images/7.png" alt="">
+                        </a>
+                    </div>
+                      <p class="dianwo ani"
+                         swiper-animate-effect="zoomIn"
+                         swiper-animate-duration="2s"
+                         swiper-animate-delay="1s"
+                      >点我</p>
+                      <p class="one-zhong ani"
+                         swiper-animate-effect="zoomIn"
+                         swiper-animate-duration="2s"
+                         swiper-animate-delay="1.5s"
+                      >中秋
+                      </p>
+                      <p class="de ani"
+                         swiper-animate-effect="zoomIn"
+                         swiper-animate-duration="2s"
+                         swiper-animate-delay="2s"
+                      >佳节</p>
+                      <p class="miss ani"
+                         swiper-animate-effect="zoomIn"
+                         swiper-animate-duration="2s"
+                         swiper-animate-delay="2.5s"
+                      >吃月饼，话团圆</p>
+                </div>
+                <!--点击后-->
+            <div class="zhongdian">
+                <div class="zhongqiu ani"
+                     swiper-animate-effect="fadeIn"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="0.5s"
+                >
+                    <img src="images/xuanzhuan.png" alt="">
+                </div>
+                <div class="qianshou">
+                     <!--swiper-animate-effect="swing"-->
+                     <!--swiper-animate-duration="10s"-->
+                     <!--swiper-animate-delay="1s"-->
+
+                <img src="images/4.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!--第二页father-->
+        <div class="swiper-slide">
+               <div class="year-zhong">
+                     <p class="ani"
+                        swiper-animate-effect="bounceInLeft"
+                        swiper-animate-duration="2s"
+                        swiper-animate-delay="0.5s"
+                     >今年的中秋，我不在您身边</p>
+                     <p class="ani"
+                        swiper-animate-effect="bounceInLeft"
+                        swiper-animate-duration="2s"
+                        swiper-animate-delay="1.5s"
+                     >懂得您的牵挂</p>
+                     <p class="ani"
+                        swiper-animate-effect="bounceInLeft"
+                        swiper-animate-duration="2s"
+                        swiper-animate-delay="3s"
+                     >电话另一边的想念</p>
+                     <p class="ani"
+                        swiper-animate-effect="bounceInLeft"
+                        swiper-animate-duration="2s"
+                        swiper-animate-delay="4s"
+                     >还有点依赖</p>
+                   <p class="ani"
+                      swiper-animate-effect="bounceInLeft"
+                      swiper-animate-duration="2s"
+                      swiper-animate-delay="5s"
+                   >我可爱的老爸</p>
+               </div>
+            <div class="daughter">
+                <img src="images/baba.gif" alt="">
+            </div>
+            <div class="father-tu">
+                <img src="images/father.gif" alt="">
+            </div>
+        </div>
+        <!--第三页mother-->
+        <div class="swiper-slide">
+            <div class="hongxin">
+                 <!--swiper-animate-effect="swing"-->
+                 <!--swiper-animate-duration="2s"-->
+                 <!--swiper-animate-delay="1s"-->
+            <!--&gt;-->
+                  <img src="images/5.png" class="ani"
+                swiper-animate-effect="swing"
+                swiper-animate-duration="10s"
+                swiper-animate-delay="1s"
+                  >
+            </div>
+
+            <div class="get-tell">
+            <p class="ani"
+                  swiper-animate-effect="qqpulse"
+                  swiper-animate-duration="2s"
+                  swiper-animate-delay="1s"
+            >点我</p>
+            <p class="ani"
+               swiper-animate-effect="qqpulse"
+               swiper-animate-duration="2s"
+               swiper-animate-delay="2s"
+            >获取对妈咪的专属告白</p>
+            </div>
+            <div class="mother-love">
+                 <p class="ani"
+                    swiper-animate-effect="fadeIn"
+                    swiper-animate-duration="1s"
+                    swiper-animate-delay="0.5s"
+                 >妈咪，收到您的</p>
+                <p class="ani"
+                   swiper-animate-effect="fadeIn"
+                   swiper-animate-duration="1s"
+                   swiper-animate-delay="1s"
+                >女王专属礼物了吗</p>
+                 <p class="ani"
+                    swiper-animate-effect="fadeIn"
+                    swiper-animate-duration="1s"
+                    swiper-animate-delay="1.5s"
+                 >在我心中</p>
+                 <p class="ani"
+                    swiper-animate-effect="fadeIn"
+                    swiper-animate-duration="1s"
+                    swiper-animate-delay="2.5s"
+                 >您永远是最美的样子</p>
+                <p class="ani"
+                   swiper-animate-effect="fadeIn"
+                   swiper-animate-duration="1s"
+                   swiper-animate-delay="3s"
+                >我爱你</p>
+                <div class="small-gift">
+                    <img src="images/gift-small.png">
+                </div>
+                <div class="big-gift">
+                    <img src="images/gift.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!--第四页 I-->
+        <div class="swiper-slide">
+            <div class="people">
+                  <img src="//z2.xiu.top/upload/0a9c60fb28488a2f8893d0b4b188cd40/img/e849a83714cfb1cf.png" alt="">
+            </div>
+            <div class="haoxiang">
+                <p class="ani"
+                     swiper-animate-effect="bounceInDown"
+                     swiper-animate-duration="1s"
+                     swiper-animate-delay="0.5s"
+                >好想你们在身边</p>
+                <p class="ani"
+                     swiper-animate-effect="bounceInDown"
+                     swiper-animate-duration="1s"
+                     swiper-animate-delay="1.5s"
+                >在哪里都是</p>
+                <p class="ani"
+                   swiper-animate-effect="fadeIn"
+                   swiper-animate-duration="1s"
+                   swiper-animate-delay="3s"
+                >家
+                </p>
+            </div>
+        </div>
+        <!--第五页 love-->
+        <div class="swiper-slide">
+                <img src="images/3.png" alt="">
+            <div class="piaobo">
+            <p class="ani"
+               swiper-animate-effect="zoomIn"
+               swiper-animate-duration="2s"
+               swiper-animate-delay="1s"
+            >几许漂泊</p>
+            <p class="ani"
+               swiper-animate-effect="zoomIn"
+               swiper-animate-duration="2s"
+               swiper-animate-delay="2s"
+            >才懂得你们的爱是最珍贵的</p>
+            </div>
+        </div>
+        <!--第六页 you-->
+        <div class="swiper-slide">
+            <div class="suiran">
+            <p class="ani"
+               swiper-animate-effect="fadeIn"
+               swiper-animate-duration="1s"
+               swiper-animate-delay="0.5s"
+            >虽然我不在你们身边很久</p>
+            <p class="ani"
+               swiper-animate-effect="fadeIn"
+               swiper-animate-duration="1s"
+               swiper-animate-delay="1s"
+            >但是你们一直在我心底</p>
+            <p class="ani"
+               swiper-animate-effect="fadeIn"
+               swiper-animate-duration="1s"
+               swiper-animate-delay="1.5s"
+            >最柔软的角落</p>
+            <p class="ani"
+               swiper-animate-effect="fadeIn"
+               swiper-animate-duration="1s"
+               swiper-animate-delay="2s"
+            >给我力量</p>
+            <p class="ani"
+               swiper-animate-effect="fadeIn"
+               swiper-animate-duration="1s"
+               swiper-animate-delay="2.5s"
+            >让我无论在哪都有家</p>
+            <p class="ani"
+               swiper-animate-effect="fadeIn"
+               swiper-animate-duration="1s"
+               swiper-animate-delay="3s"
+            >希望下一个中秋我们可以在一起</p>
+                <p class="ani"
+                   swiper-animate-effect="fadeIn"
+                   swiper-animate-duration="1s"
+                   swiper-animate-delay="3.5s"
+                >father and mother I love you</p>
+            </div>
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+</div>
+<div class="up-arrow">
+    <img src="images/arrow-up.png" alt="滑动切换" />
+</div>
+
+<div>
+    <audio src="images/fuqin.mp3" autoplay loop></audio>
+    <div class="btn-music-on"></div>
+</div>
+
+<script src="script/swiper.min.js"></script>
+<script src="script/swiper.animate.min.js"></script>
+<script>
+    var oAudio = document.querySelector("audio");
+    var oBtnMusic = document.querySelector(".btn-music-on");
+
+    oBtnMusic.addEventListener('click',function(){
+        if(oAudio.paused){  //判断当前是否是暂停状态
+            oAudio.paused=false;
+            oAudio.play();
+            oBtnMusic.className='btn-music-on';
+            oBtnMusic.style.animationPlayState= "running";
+        }else{
+            oAudio.paused=true;
+            oAudio.pause();
+            oBtnMusic.className='btn-music-on btn-music-off';
+            oBtnMusic.style.animationPlayState= "paused";
+        }
+    });
+    var myswiper = new Swiper('.swiper-container',{
+    //分页器
+    pagination: '.swiper-pagination',
+    //分页是否能点击
+    paginationClickable: true,
+    //方向：垂直
+    direction: 'vertical',
+    onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+    swiperAnimateCache(swiper); //隐藏动画元素
+    swiperAnimate(swiper); //初始化完成开始动画
+    },
+    onSlideChangeEnd: function(swiper){
+    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+    }
+
+    });
+    var zhongDian = document.querySelector(".zhongdian");
+    var yuebingPre = document.querySelector(".yuebing-pre");
+    var pleaseMe = document.querySelector(".please-me");
+    var getTell = document.querySelector(".get-tell");
+    var motherLove = document.querySelector(".mother-love");
+    var hongXin = document.querySelector(".hongxin");
+    pleaseMe.addEventListener('click',function () {
+        pleaseMe.style.display = 'none';
+//        yuebingPre.style.display = 'none';
+        zhongDian.style.display = "block";
+    });
+    getTell.addEventListener('click',function () {
+        motherLove.style.display = "block";
+        hongXin.style.display = "none";
+        getTell.style.display = "none";
+    })
+</script>
+</body>
+</html>

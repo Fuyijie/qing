@@ -1,0 +1,35 @@
+html,body{
+    height: 100%;
+    position: relative;
+}
+body{
+    background: #eee;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+.swiper-container{
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide{
+    font-size: 18px;
+    text-align: center;
+    background: #fff;
+}
+
+/*向上箭头*/
+.up-arrow{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    bottom:40px;
+    width: 75px;
+    z-index: 11;
+    opacity: 0.8;
+}
+.up-arrow img{
+    width: 100%;
+    animation: upArrow 1.5s infinite ease-in-out;
+}
